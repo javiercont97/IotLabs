@@ -1,0 +1,39 @@
+{
+    "server": {
+        "HOST_URL": "https://imt-iotlabs.net",
+        "PORT": 443,
+        "MONGO_URI": "mongodb://localhost/iotlabs"
+    },
+    "services": {
+        "WSTT": {
+            "PING_FREQ": 10000
+        },
+        "GUEST_APPS": {
+            "AMMOUNT_OF_COMPILATION_WORKERS": 1,
+            "CPUS_PER_WORKER": 0.8
+        },
+        "MQTT": {
+            "MQTT_PORT": 1883
+        }
+    },
+    "file_uploads": {
+        "ALLOWED_EXTENTIONS": [
+            "zip"
+        ],
+        "MAX_FILE_SIZE": 25
+    },
+    "security": {
+        "SALT_SIZE": 25,
+        "API_KEY_SIZE": 64,
+        "SESSION_IV": "9fa6542a32b1590e"
+    },
+    "debugging": {
+        "DEBUG_LEVEL": [
+            "verbose",
+            "info",
+            "warning",
+            "error"
+        ],
+        "DEBUGGING_METHOD": "File"
+    }
+}

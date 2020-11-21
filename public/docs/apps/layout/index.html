@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>IoT Labs</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../assets/css/imt.css">
+
+    <link rel="stylesheet" href="../../css/codeFormatting.css">
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/docs">
+                <div class="sidebar-brand-icon">
+                    <img src="../../../assets/img/imt-Logo.jpg" height="70rem">
+                </div>
+                <div class="sidebar-brand-text mx-3">IoT Labs</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="/docs">
+                    <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+                    <span>Introducción</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                API
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <img src="../../../assets/img/icons/app.white.svg">
+                    <span>Aplicaciones</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/docs/apps/intro/">Introducción</a>
+                        <a class="collapse-item" href="/docs/apps/editor/">Editor</a>
+                        <a class="collapse-item" href="/docs/apps/layout/">Layout</a>
+                        <a class="collapse-item" href="/docs/apps/wstt/">Comunicación</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <img src="../../../assets/img/icons/cpu.white.svg">
+                    <span>Dispositivos</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/docs/devices/intro/">Introducción</a>
+                        <a class="collapse-item" href="/docs/devices/mqtt/">Comunicación</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Herramientas
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <img src="../../../assets/img/icons/editor.white.svg">
+                    <span>Editor</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/docs/editor/intro/">Introducción</a>
+                        <a class="collapse-item" href="/docs/editor/gui/">Interfaz</a>
+                        <a class="collapse-item" href="/docs/editor/packaging/">Creación de paquetes</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDataLogger"
+                    aria-expanded="true" aria-controls="collapseDataLogger">
+                    <img src="../../../assets/img/icons/terminal.white.svg">
+                    <span>Data Logger</span>
+                </a>
+                <div id="collapseDataLogger" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/docs/logger/intro/">Introducción</a>
+                        <a class="collapse-item" href="/docs/logger/gui/">Interfaz</a>
+                        <a class="collapse-item" href="/docs/logger/reports/">Generación de reportes</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <h3>Aplicaciones - Layout</h3>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Layout</h1>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row mx-2">
+                        <p>
+                            Los layouts en QML se pueden construir de muchas formas, pero la más simple es utilizando los componentes Column y Row. <br>
+                            La forma de utilizar ambos es muy similar dado que comparten la misma API:
+                        </p>
+                    </div>
+
+                    <div class="row mx-2">
+                        <div>
+                            <hr class="my-1">
+                            <span class="lineNumber-3">1</span><span class="qml-p-keyword">import</span> QtQuick 2.12 <br>
+                            <span class="lineNumber-3">2</span><span class="qml-p-keyword">import</span> QtQuick.Controls 2.12 <br>
+                            <span class="lineNumber-3">3</span><br>
+                            <span class="lineNumber-3">4</span><span class="qml-p-keyword">Item</span> { <br>
+                            <span class="lineNumber-3">5</span>    <span class="indent-1"><span class="qml-variable">id</span>: root</span> <br>
+                            <span class="lineNumber-3">6</span>    <span class="indent-1"><span class="qml-p-keyword">Column</span> {</span> <br>
+                            <span class="lineNumber-3">7</span>    <span class="indent-2"><span class="qml-variable">spacing</span>: 5</span> <span class="qml-comment">// spacing determina la separación entre componentes</span> <br>
+                            <span class="lineNumber-3">8</span>    <span class="indent-2"><span class="qml-variable">width</span>: 300</span> <span class="qml-comment">// width determina el ancho de la columna, para esto es posible utilizar anchors.</span> <br>
+                            <span class="lineNumber-3">9</span>    <span class="indent-2"><span class="qml-variable">height</span>: 300</span> <span class="qml-comment">// height determina el alto de la columna, para esto es posible utilizar anchors. </span> <br>
+                            <span class="lineNumber-2">10</span>    <span class="indent-2"><span class="qml-p-keyword">Label</span> {</span> <br>
+                            <span class="lineNumber-2">11</span>        <span class="indent-3 qml-comment">// Propiedades de Label</span> <br>
+                            <span class="lineNumber-2">12</span>    <span class="indent-2">}</span> <br>
+                            <span class="lineNumber-2">13</span>    <span class="indent-2"><span class="qml-p-keyword">Button</span> {</span> <br>
+                            <span class="lineNumber-2">14</span>        <span class="indent-3 qml-comment">// Propiedades de Button</span> <br>
+                            <span class="lineNumber-2">15</span>    <span class="indent-2">}</span> <br>
+                            <span class="lineNumber-2">16</span>    <span class="indent-2"><span class="qml-p-keyword">Row</span> {</span> <br>
+                            <span class="lineNumber-2">17</span>        <span class="indent-3 qml-comment">// Es posible insertar elementos de layout dentro de otros</span> <br>
+                            <span class="lineNumber-2">18</span>    <span class="indent-2">}</span> <br>
+                            <span class="lineNumber-2">19</span>    <span class="indent-1">}</span> <br>
+                            <span class="lineNumber-2">20</span>    <br>
+                            <span class="lineNumber-2">21</span>    <span class="indent-1"><span class="qml-p-keyword">Row</span> {</span> <br>
+                            <span class="lineNumber-2">22</span>        <span class="indent-2"><span class="qml-variable">spacing</span>: 5</span> <span class="qml-comment">// spacing determina la separación entre componentes</span> <br>
+                            <span class="lineNumber-2">23</span>        <span class="indent-2"><span class="qml-variable">width</span>: 300</span> <span class="qml-comment">// width determina el ancho de la fila, para esto es posible utilizar anchors.</span> <br>
+                            <span class="lineNumber-2">24</span>        <span class="indent-2"><span class="qml-variable">height</span>: 300</span> <span class="qml-comment">// height determina el alto de la fila, para esto es posible utilizar anchors. </span> <br>
+                            <span class="lineNumber-2">25</span>        <br>
+                            <span class="lineNumber-2">26</span>        <span class="indent-2"><span class="qml-p-keyword">Label</span> {</span> <br>
+                            <span class="lineNumber-2">27</span>            <span class="indent-3 qml-comment">// Propiedades de Label</span> <br>
+                            <span class="lineNumber-2">28</span>        <span class="indent-2">}</span> <br>
+                            <span class="lineNumber-2">29</span>        <span class="indent-2"><span class="qml-p-keyword">Button</span> {</span> <br>
+                            <span class="lineNumber-2">30</span>            <span class="indent-3 qml-comment">// Propiedades de Button</span> <br>
+                            <span class="lineNumber-2">31</span>        <span class="indent-2">}</span> <br>
+                            <span class="lineNumber-2">32</span>        <span class="indent-2"><span class="qml-p-keyword">Column</span> {</span> <br>
+                            <span class="lineNumber-2">33</span>            <span class="indent-3 qml-comment">// Es posible insertar elementos de layout dentro de otros</span> <br>
+                            <span class="lineNumber-2">34</span>        <span class="indent-2">}</span> <br>
+                            <span class="lineNumber-2">35</span>    <span class="indent-1">}</span> <br>
+                            <span class="lineNumber-2">36</span>    <br>
+                            <span class="lineNumber-2">37</span>    <span class="indent-1"><span class="qml-p-keyword">Row</span> {</span> <br>
+                            <span class="lineNumber-2">38</span>        <span class="indent-2"><span class="qml-variable">anchors.fill</span>: parent</span> <span class="qml-comment">// es posible utilizar anchors para algunas propiedades. En este caso la fila ocupará todo el espacio (fill) de su elemento padre, id: root</span><br>
+                            <span class="lineNumber-2">39</span>    <span class="indent-1">}</span> <br>
+                            <span class="lineNumber-2">40</span>}
+                            <hr class="my-1">
+                            Elementos de layout
+                            <hr class="my-1">
+                        </div>
+                    </div>
+
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Controles</h1>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row mx-2">
+                        <p>
+                            Existen diversos controles que se pueden utilizar para construir interfaces gráficas. Aquí veremos solo los más relevantes.
+                        </p>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row mx-2">
+                        <div>
+                            <hr class="my-1">
+                            <span class="lineNumber-3">1</span><span class="qml-p-keyword">import</span> QtQuick 2.12 <br>
+                            <span class="lineNumber-3">2</span><span class="qml-p-keyword">import</span> QtQuick.Controls 2.12 <br>
+                            <span class="lineNumber-3">3</span><br>
+                            <span class="lineNumber-3">4</span><span class="qml-p-keyword">Item</span> { <br>
+                            <span class="lineNumber-3">5</span>    <span class="indent-1"><span class="qml-variable">id</span>: root</span> <br>
+                            <span class="lineNumber-3">6</span>    <span class="indent-1"><span class="qml-p-keyword">Column</span> {</span> <br>
+                            <span class="lineNumber-3">7</span>        <span class="indent-2"><span class="qml-variable">anchors.centerIn</span>: parent</span> <span class="qml-comment">// Colocar la columna en el centro del elemento padre</span> <br>
+                            <span class="lineNumber-3">8</span>        <span class="indent-2"><span class="qml-variable">spacing</span>: 50</span> <br>
+                            <span class="lineNumber-3">9</span>        <span class="indent-2"><span class="qml-p-keyword">Label</span> {</span> <br>
+                            <span class="lineNumber-2">10</span>            <span class="indent-3 qml-variable">text</span>: &quot;<span class="qml-string">Hello world</span>&quot; <br>
+                            <span class="lineNumber-2">11</span>            <span class="indent-3 qml-variable">font.pointSize</span>: 25 <span class="qml-comment">// Cambiar el tamaño de la fuente a 25pt</span><br>
+                            <span class="lineNumber-2">12</span>        <br>
+                            <span class="lineNumber-2">13</span>        <span class="indent-2">}</span> <br>
+                            <span class="lineNumber-2">14</span>        <span class="indent-2"><span class="qml-p-keyword">Button</span> {</span> <br>
+                            <span class="lineNumber-2">15</span>            <span class="indent-3 qml-variable">text</span>: &quot;<span class="qml-string">Click me!</span>&quot; <br>
+                            <span class="lineNumber-2">16</span>            <span class="indent-3 qml-variable">onClicked</span>: { <br>
+                            <span class="lineNumber-2">17</span>                <span class="indent-4 qml-comment">// Función de JavaScript que se ejecuta cuando el botón es clickeado</span> <br>
+                            <span class="lineNumber-2">18</span>                <span class="indent-4 qml-comment">// En esta función no se reciben argumentos. Sin embargo, es posible manipular otros elementos mediante el id</span> <br>
+                            <span class="lineNumber-2">19</span>            <span class="indent-3">} <br>
+                            <span class="lineNumber-2">20</span>        <span class="indent-2">}</span> <br>
+                            <span class="lineNumber-2">21</span>        <span class="indent-2"><span class="qml-p-keyword">Switch</span> {</span> <br>
+                            <span class="lineNumber-2">22</span>            <span class="indent-3 qml-variable">text</span>: &quot;<span class="qml-string">Switch me!</span>&quot; <br>
+                            <span class="lineNumber-2">23</span>            <span class="indent-3 qml-variable">onCheckedChanged</span>: { <br>
+                            <span class="lineNumber-2">24</span>                <span class="indent-4 qml-comment">// Función de JavaScript que se ejecuta cuando el switch cambia de estado</span> <br>
+                            <span class="lineNumber-2">25</span>                <span class="indent-4 qml-comment">// En esta función se recibe el argumento checked. También es posible manipular otros elementos mediante el id</span> <br>
+                            <span class="lineNumber-2">26</span>                <span class="indent-4 qml-p-keyword">if</span> (<span class="qml-arg">checked</span>) { <br>
+                            <span class="lineNumber-2">27</span>                    <span class="indent-5 qml-comment">// El switch esta encendido</span> <br>
+                            <span class="lineNumber-2">28</span>                <span class="indent-4">}</span> <span class="qml-p-keyword">else </span> {<br>
+                            <span class="lineNumber-2">29</span>                        <span class="indent-5 qml-comment">// El switch esta apagado</span> <br>
+                            <span class="lineNumber-2">30</span>                <span class="indent-4">}</span> <br>
+                            <span class="lineNumber-2">31</span>            <span class="indent-3">} <br>
+                            <span class="lineNumber-2">32</span>        <span class="indent-2">}</span> <br>
+                            <span class="lineNumber-2">33</span>        <span class="indent-2"><span class="qml-p-keyword">Slider</span> {</span> <br>
+                            <span class="lineNumber-2">34</span>            <span class="indent-3 qml-variable">from</span>: 0 <span class="qml-comment">// Valor minimo. El valor por omisión es 0</span> <br>
+                            <span class="lineNumber-2">35</span>            <span class="indent-3 qml-variable">to</span>: 100 <span class="qml-comment">// Valor máximo. El valor por omisión es 1</span> <br>
+                            <span class="lineNumber-2">36</span>            <span class="indent-3 qml-variable">stepSize</span>: 2 <span class="qml-comment">// Valor de los incrementos</span> <br>
+                            <span class="lineNumber-2">37</span>            <span class="indent-3 qml-variable">orientation</span>: Qt.Vertical <span class="qml-comment">// El valor por omisión es Qt.Horizontal. Los valores posibles son Qt.Vertical y Qt.Horizontal</span> <br>
+                            <span class="lineNumber-2">38</span>            <span class="indent-3 qml-variable">onValueChanged</span>: { <br>
+                            <span class="lineNumber-2">39</span>                <span class="indent-4 qml-comment">// Función de JavaScript que se ejecuta cuando el valor del Slider cambia</span> <br>
+                            <span class="lineNumber-2">40</span>                <span class="indent-4 qml-comment">// Esta funcion recibe el argumento value</span> <br>
+                            <span class="lineNumber-2">41</span>                <span class="indent-4">console.</span><span class="qml-function">log</span> ( <span class="qml-arg">value</span> ); <span class="qml-comment">// Mostrar el valor del Slider en la consola del navegador</span> <br>
+                            <span class="lineNumber-2">42</span>            <span class="indent-3">}</span> <br>
+                            <span class="lineNumber-2">43</span>        <span class="indent-2">}</span> <br>
+                            <span class="lineNumber-2">44</span>    <span class="indent-1">}</span> <br>
+                            <span class="lineNumber-2">45</span>}
+                            <hr class="my-1">
+                            Controles básicos disponibles
+                            <hr class="my-1">
+                        </div>
+                    </div>
+
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Controles avanzados</h1>
+                    </div>
+
+                    <div class="row mx-2">
+                        <div>
+                            <hr class="my-1">
+                            <span class="lineNumber-3">1</span><span class="qml-p-keyword">import</span> QtQuick 2.12 <br>
+                            <span class="lineNumber-3">2</span><span class="qml-p-keyword">import</span> QtQuick.Controls 2.12 <br>
+                            <span class="lineNumber-3">3</span><span class="qml-p-keyword">import</span> Controls 1.0 <span class="qml-comment">// Importar controles avanzados</span> <br>
+                            <span class="lineNumber-3">4</span><br>
+                            <span class="lineNumber-3">5</span><span class="qml-p-keyword">Item</span> { <br>
+                            <span class="lineNumber-3">6</span>    <span class="indent-1"><span class="qml-variable">id</span>: root</span> <br>
+                            <span class="lineNumber-3">7</span>    <span class="indent-1"><span class="qml-p-keyword">Column</span> {</span> <br>
+                            <span class="lineNumber-3">8</span>        <span class="indent-2"><span class="qml-variable">anchors.centerIn</span>: parent</span> <span class="qml-comment">// Colocar la columna en el centro del elemento padre</span> <br>
+                            <span class="lineNumber-3">9</span>        <span class="indent-2"><span class="qml-variable">spacing</span>: 50</span> <br>
+                            <span class="lineNumber-2">10</span>        <span class="indent-2"><span class="qml-p-keyword">Dial</span> {</span> <br>
+                            <span class="lineNumber-2">11</span>            <span class="indent-3 qml-variable">id</span>: dial <span class="qml-comment">// Asignar el id dial</span> <br>
+                            <span class="lineNumber-2">12</span>            <span class="indent-3 qml-variable">from</span>: 0 <span class="qml-comment">// Valor minimo. El valor por omisión es 0</span> <br>
+                            <span class="lineNumber-2">13</span>            <span class="indent-3 qml-variable">to</span>: 100 <span class="qml-comment">// Valor máximo. El valor por omisión es 1</span> <br>
+                            <span class="lineNumber-2">14</span>            <span class="indent-3 qml-variable">stepSize</span>: 2 <span class="qml-comment">// Valor de los incrementos</span> <br>
+                            <span class="lineNumber-2">15</span>            <span class="indent-3 qml-variable">onValueChanged</span>: { <br>
+                            <span class="lineNumber-2">16</span>                <span class="indent-4 qml-comment">// Función de JavaScript que se ejecuta cuando el valor del Dial cambia</span> <br>
+                            <span class="lineNumber-2">17</span>                <span class="indent-4 qml-comment">// Esta funcion recibe el argumento value</span> <br>
+                            <span class="lineNumber-2">18</span>                <span class="indent-4">console.</span><span class="qml-function">log</span> ( <span class="qml-arg">value</span> ); <span class="qml-comment">// Mostrar el valor del Dial en la consola del navegador</span> <br>
+                            <span class="lineNumber-2">19</span>                <span class="indent-4">gauge.</span><span class="qml-variable">value</span> = <span class="qml-arg">value</span>; <span class="qml-comment">// Cambiar el valor de gauge con el valor del Dial</span> <br>
+                            <span class="lineNumber-2">20</span>            <span class="indent-3">}</span> <br>
+                            <span class="lineNumber-2">21</span>        <span class="indent-2">}</span> <br>
+                            <span class="lineNumber-2">22</span>        <span class="indent-2"><span class="qml-p-keyword">Gauge</span> {</span> <br>
+                            <span class="lineNumber-2">23</span>            <span class="indent-3 qml-variable">id</span>: gauge <span class="qml-comment">// Asignar el id gauge</span> <br>
+                            <span class="lineNumber-2">24</span>            <span class="indent-3 qml-variable">width</span>: 200 <span class="qml-comment">// Determinar el ancho del gauge</span> <br>
+                            <span class="lineNumber-2">25</span>            <span class="indent-3 qml-variable">height</span>: 200 <span class="qml-comment">// Determinar el alto del gauge</span> <br>
+                            <span class="lineNumber-2">26</span>            <span class="indent-3 qml-variable">min</span>: 0 <span class="qml-comment">// Valor minimo. El valor por omisión es 0</span> <br>
+                            <span class="lineNumber-2">27</span>            <span class="indent-3 qml-variable">max</span>: 100 <span class="qml-comment">// Valor máximo. El valor por omisión es 100</span> <br>
+                            <span class="lineNumber-2">28</span>        <span class="indent-2">}</span> <br>
+                            <span class="lineNumber-2">29</span>        <span class="indent-2"><span class="qml-p-keyword">Gauge</span> {</span> <br>
+                            <span class="lineNumber-2">30</span>            <span class="indent-3 qml-variable">width</span>: 200 <span class="qml-comment">// Determinar el ancho del gauge</span> <br>
+                            <span class="lineNumber-2">31</span>            <span class="indent-3 qml-variable">height</span>: 200 <span class="qml-comment">// Determinar el alto del gauge</span> <br>
+                            <span class="lineNumber-2">32</span>            <span class="indent-3 qml-variable">min</span>: 0 <span class="qml-comment">// Valor minimo. El valor por omisión es 0</span> <br>
+                            <span class="lineNumber-2">33</span>            <span class="indent-3 qml-variable">max</span>: 100 <span class="qml-comment">// Valor máximo. El valor por omisión es 100</span> <br>
+                            <span class="lineNumber-2">34</span>            <span class="indent-3 qml-variable">value</span>: dial.value <span class="qml-comment">// Utilizar propery binding para asociar el valor del gauge con el de dial</span> <br>
+                            <span class="lineNumber-2">35</span>        <span class="indent-2">}</span> <br>
+                            <span class="lineNumber-2">36</span>    <span class="indent-1">}</span> <br>
+                            <span class="lineNumber-2">37</span>}
+                            <hr class="my-1">
+                            Controles avanzados disponibles
+                            <hr class="my-1">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="row">
+                        <div class="col">
+                            <div class="text-left">
+                                <a href="/docs/apps/editor/">&leftarrow; Anterior</a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="container">
+                                <div class="copyright text-center my-auto">
+                                    <span>Copyright &copy; IMT IoT Labs - 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="text-right">
+                                <a href="/docs/apps/wstt/">Siguiente &rightarrow;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../../js/sb-admin-2.min.js"></script>
+</body>
+
+</html>
